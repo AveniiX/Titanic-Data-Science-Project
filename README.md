@@ -33,8 +33,8 @@ I tested multiple configurations to find the balance between bias and variance.
 
 | Model | Accuracy | Strategy |
 | :--- | :--- | :--- |
-| **Random Forest** | **[INSERT YOUR %]** | Main model with tuned `max_depth` |
-| **Logistic Regression** | **[INSERT YOUR %]** | Used as a baseline for smaller data slices |
+| **Random Forest** | **[INSERT YOUR 82.1]** | Main model with tuned `max_depth` |
+
 
 ---
 
