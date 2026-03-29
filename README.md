@@ -33,7 +33,7 @@ I tested multiple configurations to find the balance between bias and variance.
 
 | Model | Accuracy | Strategy |
 | :--- | :--- | :--- |
-| **Random Forest** | **[82.1 ACCURACY]** | Main model with tuned `max_depth` |
+| **Random Forest** | **[82.1]** | Main model with tuned `max_depth` |
 
 
 ---
