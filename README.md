@@ -1,17 +1,50 @@
-# Project Title: Titanic Survival Prediction
-## Goal: Built a machine learning model to predict passenger survival with [Your Accuracy]% accuracy using Random Forest.
-## Key Steps Taken:
-###  Data Cleaning: Handled missing values in 'Age' and 'Embarked' using median and mode imputation.
+# 🚢 Titanic Survival Prediction: End-to-End ML Pipeline
 
-### Feature Engineering: Created new features like IsAlone and Title to improve model signal.
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
 
-### Model Selection: Compared Random Forest and Logistic Regression to handle dataset constraints.
+## 📌 Project Overview
+This project predicts the survival probability of passengers on the Titanic using machine learning. It covers the full data science lifecycle: from handling messy, real-world data to optimizing a classification model.
 
-### Evaluation: Used Cross-Validation to ensure the model wasn't just "memorizing" the data (overfitting).
+### Key Achievements:
+* **Resolved Overfitting:** Identified and fixed a "100% accuracy" data leakage issue.
+* **Feature Engineering:** Created custom features like `IsAlone` and extracted `Titles` from names to improve predictive power.
+* **Model Optimization:** Compared Random Forest and Logistic Regression to find the best fit for the dataset size.
 
-## What I Learned:
-### How to handle "Data Leakage" (when the model "cheats").
+---
 
-### The importance of data volume (transitioning from 84 rows to 891 rows).
+## 🛠️ Data Strategy
 
-### Encoding categorical strings into numerical data for machine learning.
+### 1. Data Cleaning
+* **Age:** Imputed missing values using the median to maintain distribution.
+* **Embarked:** Filled missing entries with the most frequent port ('S').
+* **Feature Dropping:** Removed high-cardinality features like `Ticket` and `Cabin` (which had >70% missing data).
+
+### 2. Feature Engineering
+* **Sex/Embarked:** Converted categorical strings into numerical values using mapping.
+* **IsAlone:** A binary feature derived from `SibSp` (siblings) and `Parch` (parents).
+
+---
+
+## 📊 Model Performance
+
+I tested multiple configurations to find the balance between bias and variance.
+
+| Model | Accuracy | Strategy |
+| :--- | :--- | :--- |
+| **Random Forest** | **[INSERT YOUR %]** | Main model with tuned `max_depth` |
+| **Logistic Regression** | **[INSERT YOUR %]** | Used as a baseline for smaller data slices |
+
+---
+
+## 🚀 How to Use
+1.  **Clone the Repo:** `git clone https://github.com/YOUR_USERNAME/Titanic-Survival-Predictor.git`
+2.  **Install Dependencies:** `pip install pandas scikit-learn`
+3.  **Run the Notebook:** Open `Titanic_Analysis.ipynb` in Jupyter or Colab.
+
+---
+
+## 💡 Lessons Learned
+* **Data Quality > Algorithm:** Even a complex Random Forest can't fix a tiny or messy dataset.
+* **Validation is Key:** Using Train/Test splits is essential to ensure the model generalizes to new passengers.
